@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart showing money that was donated to parties!!</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <canvas id="myPieChart" width="50" height="50"></canvas>
+
+    <script>
+        var ctx = document.getElementById('myPieChart').getContext('2d');
+        var myPieChart = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: {{label|tojson}},
+                datasets: [{
+                    label: 'Depicting Bond given to Political Parties',
+                    data: {{data|tojson}}, 
+                }]
+            },
+        });
+    </script>
+    <button onclick="downloadCanvas()">DOWNLOAD IMAGE</button>
+    <script>
+    function downloadCanvas(){
+        var canvas=document.getElementById("myPieChart");
+        var image=canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+        var link=document.createElement('a');
+        link.download='chart.png';
+        link.href=image;
+        link.click();
+    }
+    </script>
+</body>
+</html>

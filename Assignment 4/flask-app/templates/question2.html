@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Display</title>
+</head>
+<body>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <div>
+        <canvas id="mychart"></canvas>
+    </div>
+    <script>
+        var label = ['2019', '2020', '2021', '2022', '2023', '2024'];
+        var da = {{money|tojson}}; 
+
+        const data = {
+            labels: {{year|tojson}},
+            datasets: [{
+                data: da,
+                backgroundColor: ["rgb(66,221,245)", "rgb(0,221,245)", "rgb(66,0,245)", "rgb(66,221,24)", "rgb(66,221,245)", "rgb(66,221,245)"],
+                legend: "Amount of Money"
+            }]
+        };
+
+        const config = {
+            type: 'bar',
+            data: data
+        };
+
+        const chart = new Chart(
+            document.getElementById('mychart'),
+            config
+        );
+    </script>
+    <button onclick="downloadCanvas()">DOWNLOAD IMAGE</button>
+    <script>
+    function downloadCanvas(){
+        var canvas=document.getElementById("mychart");
+        var image=canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+        var link=document.createElement('a');
+        link.download='chart.png';
+        link.href=image;
+        link.click();
+    }
+    </script>
+</body>
+</html>
