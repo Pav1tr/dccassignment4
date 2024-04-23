@@ -21,3 +21,9 @@ QUESTION 4
 QUESTION 5
 ![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/2df7bb3c-a637-4d6c-8105-babb9abddca2)
 
+SQL DUMP IMAGES
+![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/2928f1e4-59dd-4d02-b1a1-d643aee3fb69)
+![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/7be82d1b-77d4-4403-aab0-72e1ade30903)
+![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/9bee2e72-d579-46ac-8aaf-c877a93dd788)
+![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/995193c6-d01d-4d18-a4a6-066f6f83091a)
+![image](https://github.com/Pav1tr/dccassignment4/assets/155984578/260260f9-df3b-446e-b254-740fc1786d1b)
